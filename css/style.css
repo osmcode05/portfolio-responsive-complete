@@ -1,0 +1,132 @@
+/* ================ GOOGLE FONTS ================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/* ================ VARIABLES CSS ================ */
+:root {
+    --first-color: #3e6ff4;
+    --second-color: #0d1730;
+}
+/* ================ Commun Proprities ================ */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.blue_title{
+    color: var(--first-color);
+}
+.blue_title::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--first-color);
+}
+/* =================== navbar ====================== */
+.navbar{
+    height: 10vh;
+}
+.nav-pills .nav-link{
+    border-radius: 0px;
+    border-bottom:solid 3px transparent ;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link{
+    background-color: transparent;
+    border-color:var(--first-color) ;
+    color: var(--first-color);
+}
+/* ================== Home ===================== */
+.home h1{
+    font-size: 3.5rem;
+}
+span,
+.media i:hover{
+    color: var(--first-color);
+}
+.home svg{
+    fill: var(--first-color);
+}
+.media{
+    bottom:5rem;
+}
+/* ======================= About ==================== */
+.about img{
+    height: 350px;
+}
+/* ===================== Skill ====================== */
+.skill img{
+    height: 300px;
+}
+.skill .blue_border{
+    height: 4px;
+    background-color: var(--first-color);
+}
+/* ==================== Work =================== */
+.work img{
+    transition: .3s;
+}
+.work img:hover{
+    transform: scale(1.25) rotate(10deg);
+}
+/* ================= Contact ================== */
+.contact input,
+.contact textarea,
+.contact .enviar{
+    width: 50%;
+    outline: none;
+    border: solid 3px var(--second-color);
+}
+.contact textarea{
+    resize: none;
+    height: 200px;
+}
+/* ====================== Footer ===================== */
+footer{
+    background-color: var(--second-color);
+}
+/* ====================== Scroll Up ===================== */
+#btnScroll{
+    bottom: -100%;
+    transition: .2s ease-in-out;
+}
+
+/* ================== Meduia Queries ================== */
+/* --- Xsmall, small and meduim device --- */
+@media screen and (width <= 991px) {
+    .navbar-nav{
+        position: fixed;
+        bottom: 0;
+        right: -100%;
+        height: 90vh;
+        width: 60vw;
+        padding-top: 4rem;
+        background: #122452;
+        transition: .3s;
+    }
+    .nav-link,
+    .nav-link:focus,
+    .nav-link:hover{
+        color: white;
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link{
+        border-color:transparent ;
+    }
+    .home h1{
+        font-size: 2.3rem;
+    }
+    .media{
+        flex-direction: column;
+        right: 15px;
+        top: 100px;
+    }
+    .skill img{
+        height: 200px;
+    }
+    .contact input,
+    .contact textarea,
+    .contact .enviar{
+        width: 100%;
+    }
+}
